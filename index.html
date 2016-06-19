@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/tns_logo.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Digital Ad Spending survey 2015/2016</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/rzslider.css" rel="stylesheet">
+    <link href="css/jquery.webui-popover.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            background-color: #ccc;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 12px;
+        }
+        
+        .question-container {
+            margin-top: 30px;
+            padding-left: 20px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        a {
+            cursor: pointer;
+        }
+        
+        .detail-header {
+            background-color: #ccc;
+        }
+        
+        a.text-danger:hover,
+        a.text-danger:focus {
+            color: #ff4136;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pull-right">
+            <img src="images/daat_logo.png" />
+            <img src="images/tns_logo.png" />
+        </div>
+        <div ui-view style="margin-top: 40px;"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <script src="js/rzslider.js"></script>
+    <script src="js/checklist-model.js"></script>
+    <script src="js/bootstrap-filestyle.min.js"></script>
+    <script src="js/jquery.webui-popover.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
