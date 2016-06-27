@@ -1,11 +1,14 @@
 <?php
+define ('SITE_ROOT', realpath(dirname(__FILE__)));
 require_once 'Classes/PHPExcel.php';
 include 'Classes/PHPExcel/IOFactory.php';
 require_once 'db.php';
 require_once 'cellconfig.php';
 
+//session_start();
+
 $fileName = Db::getFileName($_GET['uid']);
-$inputFileName = 'uploads/' . $fileName;  
+$inputFileName = SITE_ROOT.'/uploads/' . $fileName;  
 
 if(!is_file($inputFileName)) {
 	echo 'FILE_NOT_FOUND';
@@ -84,10 +87,10 @@ function getDisciplines($cellConfig, $objWorksheet, $i) {
 					|| ($discipline->detail->display->value + $discipline->detail->video->value) == 100;
 				$discipline->detail->video->isvalid = $discipline->detail->display->isvalid;
 
-				$discipline->detail->desktop_dis = round($objWorksheet->getCell($c->detailCells->display->desktop . ($i + 5))->getCalculatedValue() * 100);
-				$discipline->detail->mobile_dis = round($objWorksheet->getCell($c->detailCells->display->mobile . ($i + 5))->getCalculatedValue() * 100);
-				$discipline->detail->desktop_vdo = round($objWorksheet->getCell($c->detailCells->video->desktop . ($i + 5))->getCalculatedValue() * 100);
-				$discipline->detail->modile_vdo = round($objWorksheet->getCell($c->detailCells->video->mobile . ($i + 5))->getCalculatedValue() * 100);
+				// $discipline->detail->desktop_dis = round($objWorksheet->getCell($c->detailCells->display->desktop . ($i + 5))->getCalculatedValue() * 100);
+				// $discipline->detail->mobile_dis = round($objWorksheet->getCell($c->detailCells->display->mobile . ($i + 5))->getCalculatedValue() * 100);
+				// $discipline->detail->desktop_vdo = round($objWorksheet->getCell($c->detailCells->video->desktop . ($i + 5))->getCalculatedValue() * 100);
+				// $discipline->detail->modile_vdo = round($objWorksheet->getCell($c->detailCells->video->mobile . ($i + 5))->getCalculatedValue() * 100);
 			break;
 			case 3: // { display: 10, video: 90, isvalid: true }
 				$discipline->detail->display = round($objWorksheet->getCell($c->detailCells->display . ($i + 2))->getValue() * 100);
@@ -143,6 +146,7 @@ function getDisciplines($cellConfig, $objWorksheet, $i) {
 		$disciplines[] = $discipline;
 	}
 	
+	//$_SESSION['disciplines'] = $disciplines;
 	return $disciplines;
 }
 

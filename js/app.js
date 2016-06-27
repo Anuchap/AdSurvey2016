@@ -418,7 +418,7 @@ myApp.controller('questCtrl', function ($scope, $http, $state, $stateParams, sto
             uid: $stateParams.uid,
             qno: 2,
             answer: $scope.ans2 + '',
-            optional: $scope.ans27
+            optional: $scope.ans27 | ''
         }).success(function () {
             store.a2 = $scope.ans2;
             store.a27 = $scope.ans27;
