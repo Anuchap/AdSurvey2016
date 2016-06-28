@@ -1,7 +1,7 @@
 <?php 
 date_default_timezone_set('Asia/Bangkok');
 require 'Classes/rb.php';
-R::setup('mysql:host=localhost;dbname=adsurvey', 'root', 'morningM00n');
+R::setup('mysql:host=localhost;dbname=adsurvey2', 'root', 'morningM00n');
 //R::setup('mysql:host=mysql.hostinger.in.th;dbname=u610504232_as', 'u610504232_as', 'P@ssw0rd'); //adsurvey2
 //R::setup('mysql:host=mysql.hostinger.in.th;dbname=u147007146_as', 'u147007146_as', 'P@ssw0rd'); //adsurvey
 

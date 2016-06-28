@@ -339,7 +339,7 @@ myApp.controller('questCtrl', function ($scope, $http, $state, $stateParams, sto
 
     // quest5
     $scope.slider2 = {
-        value: store.a4 | 50,
+        value: store.a4 || 50,
         value2: 50,
         options: {
             floor: 0,
@@ -384,7 +384,7 @@ myApp.controller('questCtrl', function ($scope, $http, $state, $stateParams, sto
             uid: $stateParams.uid,
             qno: 1,
             answer: $scope.ans1,
-            optional: optional | ''
+            optional: optional || ''
         }).success(function () {
             store.a1 = $scope.ans1;
             store.a11 = $scope.ans11;
@@ -418,7 +418,7 @@ myApp.controller('questCtrl', function ($scope, $http, $state, $stateParams, sto
             uid: $stateParams.uid,
             qno: 2,
             answer: $scope.ans2 + '',
-            optional: $scope.ans27 | ''
+            optional: $scope.ans27 || ''
         }).success(function () {
             store.a2 = $scope.ans2;
             store.a27 = $scope.ans27;
