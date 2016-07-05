@@ -19,7 +19,7 @@ if($fileName == null)  {
 } else {
     $num = (int)explode('_', explode('.', $fileName)[0])[1];
 	$num++;
-	$fileName = str_replace($num-1, $num, $fileName);
+	$fileName = str_replace('_'.($num-1), '_'.$num, $fileName);
 }
 
 $targetFile = SITE_ROOT.'/uploads/'.$fileName;

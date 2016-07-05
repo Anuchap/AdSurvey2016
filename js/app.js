@@ -450,7 +450,7 @@ myApp.controller('questCtrl', function ($scope, $http, $state, $stateParams, sto
         $http.post('answer.php', {
             uid: $stateParams.uid,
             qno: 4,
-            answer: $scope.slider2.value,
+            answer: $scope.slider2.value + ',' + $scope.slider2.value2,
             optional: ''
         }).success(function () {
             $http.get('finished.php?uid=' + $stateParams.uid).success(function () {
